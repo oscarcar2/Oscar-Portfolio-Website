@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: #3C2503;
+}
+
+/* https://www.reddit.com/r/webdev/comments/8iwx8i/what_is_your_typical_css_boilerplate/dyvwuse/ 
+Boilerplate suggestion, testing it.
+intention of rem use is improved site responsiveness and accessibility while still being 10px equivalent*/
+body {
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    font-family: Arial, sans-serif;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1E1914;
+    color: white;
+}
+.header-left {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.header-right button {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.header-right button:hover {
+    background-color: #777;
+}
