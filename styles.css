@@ -8,7 +8,7 @@
 
 html {
     font-size: 62.5%;
-    color:white;
+    color: #EAEAEA;
     background-color: #ff00c8; /* Similar idea as 'missing texture' placeholder in game dev, bright mismatching colour to highlight unintended missing visuals */
     height: 100%;
 }
@@ -41,7 +41,6 @@ header {
     align-items: center;
     padding: 1rem 2rem;
     background-color: #14141E;
-    color: white;
     position: relative;
 }
 .header-left {
@@ -51,14 +50,14 @@ header {
 .header-right button {
     margin-left: 1rem;
     padding: 0.5rem 1rem;
-    background-color: #555;
-    color: white;
+    background-color: #14141E;
+    color: #EAEAEA;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 .header-right button:hover {
-    background-color: #777;
+    background-color: #3c3969;
 }
 
 footer {
@@ -67,7 +66,6 @@ footer {
     align-items: center;
     padding: 1rem 2rem;
     background-color: #14141E;
-    color: white;
     position: relative;
 }
 .footer-left {
@@ -77,12 +75,12 @@ footer {
 .footer-right button {
     margin-left: 1rem;
     padding: 0.5rem 1rem;
-    background-color: #555;
-    color: white;
+    background-color: #14141E;
+    color: #EAEAEA;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 .footer-right button:hover {
-    background-color: #777;
+    background-color: #3c3969;
 }
