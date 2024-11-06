@@ -35,19 +35,18 @@ body {
     padding: 2rem;
 }
 
-header {
+header, footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     background-color: #14141E;
-    position: relative;
 }
-.header-left {
+.header-left, .footer-left {
     font-size: 1.5rem;
     font-weight: bold;
 }
-.header-right button {
+.header-right button, .footer-right button {
     margin-left: 1rem;
     padding: 0.5rem 1rem;
     background-color: #14141E;
@@ -56,31 +55,6 @@ header {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-.header-right button:hover {
-    background-color: #3c3969;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #14141E;
-    position: relative;
-}
-.footer-left {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.footer-right button {
-    margin-left: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #14141E;
-    color: #EAEAEA;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-.footer-right button:hover {
+.header-right button:hover, .footer-right button:hover {
     background-color: #3c3969;
 }
