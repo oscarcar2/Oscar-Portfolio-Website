@@ -8,7 +8,9 @@
 
 html {
     font-size: 62.5%;
-    background-color: #3C2503;
+    color:white;
+    background-color: #ff00c8; /* Similar idea as 'missing texture' placeholder in game dev, bright mismatching colour to highlight unintended missing visuals */
+    height: 100%;
 }
 
 /* https://www.reddit.com/r/webdev/comments/8iwx8i/what_is_your_typical_css_boilerplate/dyvwuse/ 
@@ -16,16 +18,31 @@ Boilerplate suggestion, testing it.
 intention of rem use is improved site responsiveness and accessibility while still being 10px equivalent*/
 body {
     box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
     font-size: 1.6rem;
     font-family: Arial, sans-serif;
 }
+
+.main-content {
+    flex-grow: 1; /* This makes the content area grow to fill the space */
+
+    background-image: linear-gradient(to bottom, #0e2285 0%, #1A1F3F 15rem, #102b29 calc(100% - 15rem), #152368 100%); /* This currently attatches itself to the content area, because i intend to let the header scroll off the top of the screen */
+
+    padding: 2rem;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #1E1914;
+    background-color: #14141E;
     color: white;
+    position: relative;
 }
 .header-left {
     font-size: 1.5rem;
@@ -41,5 +58,31 @@ header {
     transition: background-color 0.3s;
 }
 .header-right button:hover {
+    background-color: #777;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #14141E;
+    color: white;
+    position: relative;
+}
+.footer-left {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.footer-right button {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.footer-right button:hover {
     background-color: #777;
 }
