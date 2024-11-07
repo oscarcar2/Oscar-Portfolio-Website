@@ -6,6 +6,17 @@
     box-sizing: inherit;
 }
 
+.jersey-10-regular {
+  font-family: "Jersey 10", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.jersey-25-regular {
+  font-family: "Jersey 25", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 html {
     font-size: 62.5%;
     color: #EAEAEA;
@@ -24,7 +35,7 @@ body {
     height: 100%;
 
     font-size: 1.6rem;
-    font-family: Arial, sans-serif;
+    font-family: "Jersey 10", sans-serif;
 }
 
 .main-content {
@@ -46,15 +57,28 @@ header, footer {
     font-size: 1.5rem;
     font-weight: bold;
 }
-.header-right button, .footer-right button {
+.header-right, .footer-right {
     margin-left: 1rem;
     padding: 0.5rem 1rem;
+
+    border: .2rem solid #000000;
+    border-top: .2rem solid #062BC2;
+    border-bottom: .2rem solid #062BC2;
+}
+.header-right button, .footer-right button {
+    padding: 0.5rem 1rem;
+
     background-color: #14141E;
     color: #EAEAEA;
-    border: none;
+    border: .2rem solid #000000;
+
     cursor: pointer;
     transition: background-color 0.3s;
 }
 .header-right button:hover, .footer-right button:hover {
     background-color: #3c3969;
+}
+button.current-page-highlight {
+    border-right: .2rem solid #062BC2;
+    border-bottom: .2rem solid #062BC2;
 }
