@@ -6,15 +6,16 @@
     box-sizing: inherit;
 }
 
-.jersey-10-regular {
-  font-family: "Jersey 10", serif;
-  font-weight: 400;
-  font-style: normal;
+/* The Jersey 10 and 25 fonts are available on google fonts, but have severe display issues when rasterized, so alternative pixel-inspired fonts have been used */
+.press-start-2p-regular {
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
 }
-.jersey-25-regular {
-  font-family: "Jersey 25", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.vt323-regular {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
 }
 
 html {
@@ -22,6 +23,8 @@ html {
     color: #EAEAEA;
     background-color: #ff00c8; /* Similar idea as 'missing texture' placeholder in game dev, bright mismatching colour to highlight unintended missing visuals */
     height: 100%;
+
+    min-width: 550px; /* Because background is tied to main content, extremely narrow screens broke it, and this was my best idea for a fix */
 }
 
 /* https://www.reddit.com/r/webdev/comments/8iwx8i/what_is_your_typical_css_boilerplate/dyvwuse/ 
@@ -35,7 +38,8 @@ body {
     height: 100%;
 
     font-size: 1.6rem;
-    font-family: "Jersey 10", sans-serif;
+    font-family: sans-serif; /* Backup, in case google font retrival fails */
+    font-family: "VT323", sans-serif;
 }
 
 .main-content {
@@ -48,37 +52,109 @@ body {
 
 header, footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem 2rem;
+
     background-color: #14141E;
+
+    /* Debugging style */
+    /* outline: 2px dashed #ff00c8;
+    background-color: rgb(112, 16, 91); */
 }
+
 .header-left, .footer-left {
-    font-size: 1.5rem;
-    font-weight: bold;
+    width: fit-content;
+    
+    font-size: 3.5rem;
+
+    white-space: nowrap; 
+    text-align: center;
+
+    font-family: sans-serif; /* Backup, in case google font retrival fails */
+    font-family: "Press Start 2P", sans-serif;
+
+    /* Debugging style */
+    /* outline: 2px dashed #ff00c8;
+    background-color: rgba(255, 0, 200, 0.1); */
 }
+
 .header-right, .footer-right {
     margin-left: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
+    gap: 3rem;
 
-    border: .2rem solid #000000;
-    border-top: .2rem solid #062BC2;
-    border-bottom: .2rem solid #062BC2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+
+    border-top: .4rem solid #062BC2;
+    border-bottom: .4rem solid #062BC2;
 }
+
 .header-right button, .footer-right button {
-    padding: 0.5rem 1rem;
+    padding: .5rem .5rem;
 
     background-color: #14141E;
     color: #EAEAEA;
-    border: .2rem solid #000000;
+    border: .3rem solid #000000;
+
+    flex: min-content min-content min-content; /* Set min width to fit the content */
+    min-width: min-content; /* Button width will adjust based on text */
 
     cursor: pointer;
     transition: background-color 0.3s;
+
+    white-space: nowrap; 
+    font-size: 1.6rem;
+    font-family: sans-serif; /* Backup, in case google font retrival fails */
+    font-family: "Press Start 2P", sans-serif;
 }
+
 .header-right button:hover, .footer-right button:hover {
     background-color: #3c3969;
 }
+
 button.current-page-highlight {
-    border-right: .2rem solid #062BC2;
-    border-bottom: .2rem solid #062BC2;
+    border-right: .4rem solid #062BC2;
+    border-bottom: .4rem solid #062BC2;
 }
+
+/* Alt layout for smaller screens, mainly mobile (2x2) */
+@media (max-width: 1440px) {
+    .header-right, .footer-right {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+
+        gap: 1.5rem;
+    }
+
+    .header-right button, .footer-right button {
+        width: 100%; /* Full width for each button in the grid */
+    }
+}
+/* Compressed button layout for smaller screens (2x2) */
+@media (max-width: 1575px) {
+    .header-right, .footer-right {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+        gap: 1.5rem;
+    }
+    .header-right button, .footer-right button {
+        width: 100%; /* Full width for each button in the grid */
+    }
+}
+@media (max-width: 1300px) {
+    header, footer {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 2rem;
+    }
+    .header-left, .footer-left {
+        font-size: 2.5rem;
+    }
+}
+
+
+

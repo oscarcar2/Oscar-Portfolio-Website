@@ -11,15 +11,14 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+25&display=swap" rel="stylesheet">
-        
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <!-- Tools like ChatGPT and general boilerplate resources extensively used for base layouts.
         ChatGPT prompt example: "html boilerplate for header with name text left and four buttons right." -->
         <header>
-            <div class="header-left">Game Design Portfolio Oscar Halbe</div>
+            <div class="header-left">Game Design Portfolio <br> Oscar Halbe</div>
             <div class="header-right">
                 <a href="https://www.youtube.com/watch?v=jILmUEuxU_c">
                     <button class="current-page-highlight">Home</button>
@@ -31,6 +30,33 @@
         </header>
 
         <main class="main-content">
+            
+            <div class="carousel">
+                <!-- Slide Controls -->
+                <input type="radio" id="slide1" name="carousel" checked>
+                <input type="radio" id="slide2" name="carousel">
+                <input type="radio" id="slide3" name="carousel">
+              
+                <!-- Carousel Slides -->
+                <div class="carousel__slides">
+                  <div class="carousel__slide">Slide 1</div>
+                  <div class="carousel__slide">Slide 2</div>
+                  <div class="carousel__slide">Slide 3</div>
+                </div>
+              
+                <!-- Navigation Arrows -->
+                <div class="carousel__nav">
+                  <label class="carousel__arrow carousel__arrow--left" for="slide3">&#10094;</label>
+                  <label class="carousel__arrow carousel__arrow--right" for="slide2">&#10095;</label>
+              
+                  <label class="carousel__arrow carousel__arrow--left" for="slide1">&#10094;</label>
+                  <label class="carousel__arrow carousel__arrow--right" for="slide3">&#10095;</label>
+              
+                  <label class="carousel__arrow carousel__arrow--left" for="slide2">&#10094;</label>
+                  <label class="carousel__arrow carousel__arrow--right" for="slide1">&#10095;</label>
+                </div>
+              </div>
+
             <div class="content">Main content goes here</div>
             <div class="content">Main content goes here</div>
             <div class="content">Main content goes here</div>
@@ -67,7 +93,7 @@
         </main>
 
         <footer>
-            <div class="footer-left">Game Design Portfolio Oscar Halbe</div>
+            <div class="footer-left">Game Design Portfolio <br> Oscar Halbe</div>
             <div class="footer-right">
                 <a href="https://www.youtube.com/watch?v=jILmUEuxU_c">
                     <button class="current-page-highlight">Home</button>
