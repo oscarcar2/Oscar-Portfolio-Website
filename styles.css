@@ -168,7 +168,7 @@ button.current-page-highlight {
 .carousel {
     position: relative;
     width: 80%;
-    height: fit-content;
+    height: 40rem;
     overflow: hidden;
 }
 
