@@ -37,7 +37,7 @@ body {
     flex-direction: column;
     height: 100%;
 
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     font-family: sans-serif; /* Backup, in case google font retrival fails */
     font-family: "VT323", sans-serif;
 
@@ -47,13 +47,102 @@ body {
 
 .main-content {
     background-image: linear-gradient(to bottom, #0e2285 0%, #1A1F3F 15rem, #102b29 calc(100% - 15rem), #152368 100%); /* This currently attatches itself to the content area, because i intend to let the header scroll off the top of the screen */
-
+    
     justify-items: center;
     padding: 2rem;
-
-    outline: 2px dashed #ff00c8;
-    background-color: rgb(112, 16, 91);
+    
+    /* outline: 2px dashed #ff00c8;
+    background-color: rgb(112, 16, 91); */
 }
+
+p {
+    color: #ffffff;
+}
+p br {
+    content: "";            /* Ensures the pseudo-element exists */
+    display: block;         /* Forces a block-level line break */
+    margin-bottom: 1rem;    /* Adjust this value to control the spacing */
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    
+    padding: 20px;
+
+    /* outline: 2px dashed #ff00c8;
+    background-color: rgb(112, 16, 91); */
+}
+
+.image-section {
+    position: relative;
+    flex: 0 0 40%;
+    justify-items: center;
+    max-width: 40%;
+}
+
+.image {
+    width: 100%;
+    display: block;
+    
+    outline: 1.8rem solid #14141E;
+    box-shadow: 1.25rem 1.5rem .5rem rgba(0, 0, 0, .5);
+}
+
+.buttons {
+    margin: 2rem;
+
+    width: fit-content;
+    justify-content: center;
+    display: flex;
+    gap: 2.5rem;
+
+    background-color: #14141E;
+
+    outline: 1.8rem solid #14141E;
+    box-shadow: 1.25rem 1.5rem .5rem rgba(0, 0, 0, .5);
+}
+
+.btn {
+    width: 4rem;
+    height: 4rem;
+    background-color: #1A336A;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    justify-items: center;
+
+    outline: .5rem solid #111D3A;
+}
+.btn img {
+    width: 90%; /* Set a percentage of the button size, or use px */
+    height: 90%;
+    object-fit: contain;
+    filter: invert(1); /* good luck if it's not a black png image lol */
+
+    outline: none;
+    box-shadow: none;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.text-section {
+    flex: 1;
+    margin-left: 4rem;
+    padding: .8rem;
+
+
+    background-image: linear-gradient(to bottom, #586bc950 0%, #1bc5ae10 75%, #586bc950 100%);
+    outline: .5rem solid #14141E;
+}
+
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -193,7 +282,7 @@ button.current-page-highlight {
   
 /* Slide Backgrounds */
 .carousel__slide:nth-child(1) { background-color: #121212; }
-.carousel__slide:nth-child(2) { background-color: #FFD93D; }
+.carousel__slide:nth-child(2) { background-color: #FFD93D00; }
 .carousel__slide:nth-child(3) { background-color: #6BCB77; }
   
 /* Navigation Arrows */
