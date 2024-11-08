@@ -56,12 +56,22 @@ body {
 }
 
 p {
-    color: #ffffff;
+    color: #EAEAEA;
 }
 p br {
     content: "";            /* Ensures the pseudo-element exists */
     display: block;         /* Forces a block-level line break */
     margin-bottom: 1rem;    /* Adjust this value to control the spacing */
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+
+    color: #EAEAEA;
+
+    font-family: sans-serif; /* Backup, in case google font retrival fails */
+    font-family: "Press Start 2P", sans-serif;
 }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -143,6 +153,75 @@ p br {
     outline: .5rem solid #14141E;
 }
 
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.highlighted-project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Space between content-box and image */
+
+    width: 80%;
+    
+    /* Debugging style */
+    /* outline: 2px dashed #ff00c8; */
+}
+
+.highlighted-project-title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #14141E;
+    padding: 1rem;
+    /* width: calc(100% + 3.6rem); */ /* This was intended to offset the border thickness so the elements would align, but it just overhangs right and i centering it broke the video embed dimensions for reasons i never discovered */
+
+    /* Debugging style */
+    /* outline: 2px dashed #ff00c8; */
+}
+
+.highlighted-project-iconTitle-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.icon {
+    width: 10rem;
+    height: 10rem;
+}
+
+.button {
+    background-color: #1A336A;
+    color: #EAEAEA;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    justify-items: center;
+
+    outline: .5rem solid #111D3A;
+
+    font-size: 4rem;
+    font-family: sans-serif; /* Backup, in case google font retrival fails */
+    font-family: "VT323", sans-serif;
+}
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* .title {
+
+} */
+
+.highlighted-project-video-embed-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    outline: 1.8rem solid #14141E;
+}
+.youtube-embed{
+    height: calc(56.25vw * 0.785); /* 16:9 aspect ratio (9/16 = 0.5625) with modifier for limited width. Expected .8, but it varies across screen widths for some reason, so static modifier clearly not the answer. Close enough for now. */
+}
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -247,7 +326,7 @@ button.current-page-highlight {
         flex-flow: column wrap;
         gap: 2rem;
     }
-    .header-left, .footer-left {
+    h1 { /* This used to target header-left and footer-left, but with additional text needing this resizing it was converted to h1 and the rule target changed */
         font-size: 2.5rem;
     }
 }
