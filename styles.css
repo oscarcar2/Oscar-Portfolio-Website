@@ -21,7 +21,7 @@
 html {
     font-size: 62.5%;
     color: #EAEAEA;
-    background-color: #ff00c8; /* Similar idea as 'missing texture' placeholder in game dev, bright mismatching colour to highlight unintended missing visuals */
+    background-color: #ff00c8; /* Similar idea as 'missing texture' placeholder in game dev, bright mismatching colour to highlight unintended missing visuals. Should be changed for an actual release because slow loading can flash it and eye fuck the user */
     height: 100%;
 
     min-width: 550px; /* Because background is tied to main content, extremely narrow screens broke it, and this was my best idea for a fix */
