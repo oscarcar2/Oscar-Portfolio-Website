@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* The Jersey 10 and 25 fonts are available on google fonts, but have severe display issues when rasterized, so alternative pixel-inspired fonts have been used */
+.press-start-2p-regular {
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.vt323-regular {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    font-size: 62.5%;
+    color: #000000;
+    background-color: #ff00c8; /* Similar idea as 'missing texture' placeholder in game dev, bright mismatching colour to highlight unintended missing visuals. Should be changed for an actual release because slow loading can flash it and eye fuck the user */
+    height: 100%;
+
+    min-width: 550px; /* Because background is tied to main content, extremely narrow screens broke it, and this was my best idea for a fix */
+}
+
+/* https://www.reddit.com/r/webdev/comments/8iwx8i/what_is_your_typical_css_boilerplate/dyvwuse/ 
+intention of rem use is improved site responsiveness and accessibility while still being 10px equivalent*/
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    font-size: 2.2rem;
+
+    /* outline: 2px dashed #ff00c8;
+    background-color: rgb(112, 16, 91); */
+}
+
+.main-content { 
+    justify-items: center;
+    padding: 2rem;
+    
+    /* outline: 2px dashed #ff00c8;
+    background-color: rgb(112, 16, 91); */
+}
+
+p {
+    color: #000000;
+}
+p br {
+    content: "";            /* Ensures the pseudo-element exists */
+    display: block;         /* Forces a block-level line break */
+    margin-bottom: 1rem;    /* Adjust this value to control the spacing */
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+
+    color: #000000;
+}
